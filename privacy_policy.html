@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — AutoAltus Pro Garage</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap');
+
+  :root {
+    --primary: #1a237e;
+    --accent: #00b0ff;
+    --bg: #f8f9ff;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #546e7a;
+    --border: #e3e8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Sarabun', 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+
+  header {
+    background: linear-gradient(135deg, #0d1b6e 0%, #1a237e 50%, #283593 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(0,176,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    pointer-events: none;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(0,176,255,0.5);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  header h1 {
+    color: #ffffff;
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  header p {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .lang-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .lang-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    background: transparent;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .lang-btn.active {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.7);
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  .effective-date {
+    background: #e8f4fd;
+    border-left: 4px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .section {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(26,35,126,0.06);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .section h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .section p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .section ul {
+    padding-left: 20px;
+    color: var(--text);
+    font-size: 15px;
+  }
+
+  .section ul li {
+    margin-bottom: 6px;
+    line-height: 1.8;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, #e8f4fd, #f0f4ff);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--primary);
+    border: 1px solid #c5cae9;
+  }
+
+  .contact-card {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: white;
+    border-radius: 16px;
+    padding: 28px;
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  .contact-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contact-card p {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.8;
+  }
+
+  .contact-card a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  /* Language switching */
+  [data-lang="en"] { display: none; }
+  body.en [data-lang="th"] { display: none; }
+  body.en [data-lang="en"] { display: block; }
+  .section-header [data-lang="en"],
+  .contact-card [data-lang="en"],
+  .effective-date [data-lang="en"] { display: none; }
+  body.en .section-header [data-lang="en"],
+  body.en .contact-card [data-lang="en"],
+  body.en .effective-date [data-lang="en"] { display: block; }
+  body.en .section-header [data-lang="th"],
+  body.en .contact-card [data-lang="th"],
+  body.en .effective-date [data-lang="th"] { display: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo-icon">🔧</div>
+    <h1>AutoAltus Pro Garage</h1>
+  </div>
+  <p data-lang="th">นโยบายความเป็นส่วนตัว</p>
+  <p data-lang="en">Privacy Policy</p>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('th')">🇹🇭 ภาษาไทย</button>
+    <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="effective-date">
+    <span data-lang="th">📅 มีผลบังคับใช้ตั้งแต่: 23 เมษายน 2568 | ปรับปรุงล่าสุด: 23 เมษายน 2568</span>
+    <span data-lang="en">📅 Effective Date: April 23, 2025 | Last Updated: April 23, 2025</span>
+  </div>
+
+  <!-- Section 1 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h2 data-lang="th">1. ภาพรวม</h2>
+      <h2 data-lang="en">1. Overview</h2>
+    </div>
+    <p data-lang="th">AutoAltus Pro Garage ("แอป") พัฒนาโดย AutoAltus เป็นแอปพลิเคชันสำหรับจัดการอู่ซ่อมรถอย่างมืออาชีพ เราให้ความสำคัญกับความเป็นส่วนตัวของผู้ใช้และปฏิบัติตามกฎหมายคุ้มครองข้อมูลส่วนบุคคล (PDPA) ของประเทศไทย นโยบายนี้อธิบายวิธีที่เราเก็บรวบรวม ใช้ และปกป้องข้อมูลของคุณ</p>
+    <p data-lang="en">AutoAltus Pro Garage ("the App") is developed by AutoAltus as a professional garage management application. We are committed to protecting your privacy and comply with applicable data protection laws. This policy explains how we collect, use, and protect your information.</p>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📦</div>
+      <h2 data-lang="th">2. ข้อมูลที่เราเก็บรวบรวม</h2>
+      <h2 data-lang="en">2. Data We Collect</h2>
+    </div>
+    <p data-lang="th"><strong>ข้อมูลบัญชีผู้ใช้</strong></p>
+    <p data-lang="en"><strong>Account Information</strong></p>
+    <ul data-lang="th">
+      <li>อีเมลและรหัสผ่าน (สำหรับการสมัครสมาชิก)</li>
+      <li>ข้อมูล Google Account (หากเลือกเข้าสู่ระบบด้วย Google)</li>
+    </ul>
+    <ul data-lang="en">
+      <li>Email address and password (for account registration)</li>
+      <li>Google Account information (if signing in with Google)</li>
+    </ul>
+    <br>
+    <p data-lang="th"><strong>ข้อมูลการใช้งานแอป</strong></p>
+    <p data-lang="en"><strong>App Usage Data</strong></p>
+    <ul data-lang="th">
+      <li>ข้อมูลลูกค้า เช่น ชื่อ เบอร์โทรศัพท์ ที่อยู่</li>
+      <li>ข้อมูลรถยนต์ เช่น ยี่ห้อ รุ่น ทะเบียน เลขไมล์</li>
+      <li>ข้อมูลงานซ่อมและรายการอะไหล่</li>
+      <li>รูปถ่ายที่บันทึกในแอป</li>
+      <li>ข้อมูลบริษัท/อู่ที่ผู้ใช้กรอก</li>
+    </ul>
+    <ul data-lang="en">
+      <li>Customer information: name, phone number, address</li>
+      <li>Vehicle information: make, model, license plate, mileage</li>
+      <li>Repair job records and parts inventory</li>
+      <li>Photos taken within the app</li>
+      <li>Company/garage information entered by the user</li>
+    </ul>
+    <div class="highlight-box" data-lang="th">
+      ℹ️ ข้อมูลทั้งหมดถูกเก็บไว้ในบัญชีของคุณเองใน Firebase (Google Cloud) และไม่สามารถเข้าถึงโดยผู้ใช้อื่นได้
+    </div>
+    <div class="highlight-box" data-lang="en">
+      ℹ️ All data is stored in your personal account on Firebase (Google Cloud) and is inaccessible to other users.
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🎯</div>
+      <h2 data-lang="th">3. วัตถุประสงค์การใช้ข้อมูล</h2>
+      <h2 data-lang="en">3. Purpose of Data Use</h2>
+    </div>
+    <ul data-lang="th">
+      <li>เพื่อให้บริการฟีเจอร์ต่างๆ ของแอป</li>
+      <li>เพื่อการยืนยันตัวตนและความปลอดภัยของบัญชี</li>
+      <li>เพื่อประมวลผลการชำระเงินสมาชิก (ผ่าน Google Play Billing)</li>
+      <li>เพื่อปรับปรุงและพัฒนาแอปให้ดียิ่งขึ้น</li>
+    </ul>
+    <ul data-lang="en">
+      <li>To provide app features and functionality</li>
+      <li>To authenticate and secure your account</li>
+      <li>To process subscription payments (via Google Play Billing)</li>
+      <li>To improve and develop the application</li>
+    </ul>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <h2 data-lang="th">4. การแชร์ข้อมูลกับบุคคลที่สาม</h2>
+      <h2 data-lang="en">4. Third-Party Data Sharing</h2>
+    </div>
+    <p data-lang="th">เราไม่ขายหรือแชร์ข้อมูลส่วนตัวของคุณให้กับบุคคลที่สามเพื่อการตลาด อย่างไรก็ตาม แอปใช้บริการจากผู้ให้บริการที่เชื่อถือได้ดังนี้:</p>
+    <p data-lang="en">We do not sell or share your personal data with third parties for marketing purposes. However, the app uses services from the following trusted providers:</p>
+    <br>
+    <ul data-lang="th">
+      <li><strong>Firebase (Google)</strong> — เก็บข้อมูลและการยืนยันตัวตน</li>
+      <li><strong>RevenueCat</strong> — จัดการระบบสมาชิก</li>
+      <li><strong>Google Play Billing</strong> — ประมวลผลการชำระเงิน</li>
+    </ul>
+    <ul data-lang="en">
+      <li><strong>Firebase (Google)</strong> — Data storage and authentication</li>
+      <li><strong>RevenueCat</strong> — Subscription management</li>
+      <li><strong>Google Play Billing</strong> — Payment processing</li>
+    </ul>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2 data-lang="th">5. ความปลอดภัยของข้อมูล</h2>
+      <h2 data-lang="en">5. Data Security</h2>
+    </div>
+    <ul data-lang="th">
+      <li>ข้อมูลทั้งหมดส่งผ่านการเข้ารหัส HTTPS/TLS</li>
+      <li>Firebase Security Rules จำกัดการเข้าถึงเฉพาะเจ้าของข้อมูลเท่านั้น</li>
+      <li>ไม่มีพนักงานของเราสามารถอ่านข้อมูลส่วนตัวของคุณได้</li>
+    </ul>
+    <ul data-lang="en">
+      <li>All data is transmitted via HTTPS/TLS encryption</li>
+      <li>Firebase Security Rules restrict access to data owners only</li>
+      <li>No employee can access your personal data</li>
+    </ul>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <h2 data-lang="th">6. สิทธิ์ของผู้ใช้</h2>
+      <h2 data-lang="en">6. Your Rights</h2>
+    </div>
+    <p data-lang="th">คุณมีสิทธิ์ดังต่อไปนี้ภายใต้ PDPA:</p>
+    <p data-lang="en">You have the following rights:</p>
+    <br>
+    <ul data-lang="th">
+      <li>สิทธิ์ในการเข้าถึงข้อมูลของตนเอง</li>
+      <li>สิทธิ์ในการแก้ไขข้อมูลที่ไม่ถูกต้อง</li>
+      <li>สิทธิ์ในการลบบัญชีและข้อมูลทั้งหมด</li>
+      <li>สิทธิ์ในการขอสำเนาข้อมูลของตนเอง</li>
+    </ul>
+    <ul data-lang="en">
+      <li>Right to access your personal data</li>
+      <li>Right to correct inaccurate data</li>
+      <li>Right to delete your account and all associated data</li>
+      <li>Right to request a copy of your data</li>
+    </ul>
+    <div class="highlight-box" data-lang="th">
+      🗑️ หากต้องการลบบัญชีและข้อมูลทั้งหมด กรุณาติดต่อเราผ่านอีเมลด้านล่าง
+    </div>
+    <div class="highlight-box" data-lang="en">
+      🗑️ To delete your account and all data, please contact us via the email below.
+    </div>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <h2 data-lang="th">7. การเปลี่ยนแปลงนโยบาย</h2>
+      <h2 data-lang="en">7. Policy Updates</h2>
+    </div>
+    <p data-lang="th">เราอาจปรับปรุงนโยบายนี้เป็นครั้งคราว เมื่อมีการเปลี่ยนแปลงสำคัญ เราจะแจ้งให้ทราบผ่านแอปหรืออีเมล การใช้งานแอปต่อไปหลังจากวันที่มีผลบังคับใช้ถือว่าคุณยอมรับนโยบายที่อัปเดตแล้ว</p>
+    <p data-lang="en">We may update this policy from time to time. For significant changes, we will notify you through the app or email. Continued use of the app after the effective date constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <h2 data-lang="th">📬 ติดต่อเรา</h2>
+    <h2 data-lang="en">📬 Contact Us</h2>
+    <p data-lang="th">
+      หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว<br>
+      หรือต้องการใช้สิทธิ์ของคุณ กรุณาติดต่อ:<br><br>
+      <strong>AutoAltus</strong><br>
+      อีเมล: <a href="mailto:privacy@autoaltus.com">privacy@autoaltus.com</a>
+    </p>
+    <p data-lang="en">
+      If you have questions about this Privacy Policy<br>
+      or wish to exercise your rights, please contact:<br><br>
+      <strong>AutoAltus</strong><br>
+      Email: <a href="mailto:privacy@autoaltus.com">privacy@autoaltus.com</a>
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 AutoAltus. All rights reserved. | AutoAltus Pro Garage
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.className = lang === 'en' ? 'en' : '';
+  document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', (lang === 'th' && i === 0) || (lang === 'en' && i === 1));
+  });
+  document.documentElement.lang = lang;
+}
+</script>
+</body>
+</html>
